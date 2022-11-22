@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	calculator := calculator.NewCalculator()
+	calculator := calculator.NewDefaultCalculator()
 
 	scanner := bufio.NewScanner(os.Stdin)
 
