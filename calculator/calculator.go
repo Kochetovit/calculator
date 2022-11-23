@@ -33,7 +33,6 @@ func NewDefaultCalculator() *Calculator {
 func (c *Calculator) Evaluate(operation string, num float64) error {
 	if f, ok := c.operations[operation]; ok {
 		c.result = f(c.result, num)
-
 		return nil
 	}
 

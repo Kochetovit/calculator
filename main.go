@@ -8,6 +8,8 @@ import (
 	"os"
 )
 
+const colorClear = "\033[H\033[2J"
+
 func main() {
 	calculator := calculator.NewDefaultCalculator()
 
@@ -20,12 +22,11 @@ func main() {
 
 	for {
 		var (
-			operation string
-			num       float64
-			inputStr  string
+			operation, inputStr string
+			num                 float64
 		)
 
-		fmt.Print("\033[H\033[2J") // clear console output
+		fmt.Print(colorClear) // clear console output
 		fmt.Printf("Result: %v\n", calculator.GetResult())
 		fmt.Printf("Enter operation and number: ")
 
